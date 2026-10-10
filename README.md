@@ -40,7 +40,16 @@ The project covers nationally televised WNBA regular season and playoff games fr
 
 ## 2. Literature Review
 
-*Coming next.*
+## 2. Literature Review
+
+**Stars Power:** A seminal paper [Hausman and Leonard (1997)](https://doi.org/10.1086/209839) found NBA TV ratings were substantially higher when superstars played, and put Michael Jordan's value to other NBA teams at about $53 million. This pattern holds outside team sports. For instance, German tennis audiences favored highly ranked players and home-country players ([Konjer et al., 2017](https://doi.org/10.1177/1527002515577882)). This project tests the same idea in the WNBA by comparing telecasts with and without a star available.
+
+**Close games vs. good teams:** In sports economics there is a long assumed idea where fans prefer contests with uncertain outcomes. However, The evidence is mixed when we shift the focus to the perspective of the 21st century which includes media such TVs, Radios and Live Streaming. A study by [Buraimo and Simmons (2015)](https://doi.org/10.1080/13571516.2015.1010282) found that outcome uncertainty did not raise audiences, and viewers favored talent instead in the case of the English Premier League. Another study by [Tainsky et al., (2014)], on NFL playoffs (https://doi.org/10.1177/1527002512457946) found that evenly matched games drew more viewers outside the home team markets but not inside them. That split matters for national WNBA telecasts, where most viewers are neutral. This project measure both things: how strong the two teams are combined, and how close they are.
+
+**Broadcast context:** Another crucial point when discussing sports viewership is to understand when, where and how a sporting event is broadcasted. Research shows that overlapping sporting events cut audiences in every sport. For example, NBA regular-season games lose 20.0% of viewers to MLB regular-season games ([Pagels, 2018](https://doi.org/10.3233/JSA-170117)). In these models, network and time slot are usually controls rather than findings. It is therefore crucial to consider the impact of these settings.
+
+Women's sports in general get far less attention from both media and researchers. This claim is substantiated by [Cooky et al. (2021)](https://doi.org/10.1177/21674795211003524) where the authors found that women athletes got 5.4% of airtime on telecasted sports news and highlight shows in 2019. The current research on WNBA demand has often relied on attendance in venues rather than a modern perspective of considering TV audiences. Additionally,  
+[Agha & Berri (2023)](https://doi.org/10.32731/IJSF.181.022023.03) found the WNBA's demand drivers differ enough from the NBA's that comparing the two leagues might not provide significant insights. This study will look into the drivers that led to a surge in WNBA TV audiences during the 2024–2025 season.
 
 ## 3. Methodology
 
