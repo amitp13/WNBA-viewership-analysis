@@ -2,7 +2,7 @@
 
 An analytics engineering and research project that models national WNBA telecast data in dbt and Snowflake to measure what actually brings viewers to a game. Is it the star players such A'ja Wilson & Caitlin Clark or is it the matchup quality? Does the broadcast placement matter? or does current competitative landscape of televised sports a major factor?
 
-**Status:** In progress. Section 1 is complete; later sections will be added as the build moves forward.
+**Status:** In progress. Section 2 is complete; later sections will be added as the build moves forward.
 
 ---
 
@@ -82,7 +82,5 @@ Pagels, J. (2018). Competition between sports hurts TV ratings: How to shift lea
 Tainsky, S., Xu, J., & Zhou, Y. (2014). Qualifying the game uncertainty effect: A game-level analysis of NFL postseason broadcast ratings. *Journal of Sports Economics, 15*(3), 219–236. https://doi.org/10.1177/1527002512457946
 
 ---
-
-## About
 
 Built by Amit Phadke. [LinkedIn](https://www.linkedin.com/in/amit-phadke12/)
