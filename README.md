@@ -65,6 +65,22 @@ Women's sports in general get far less attention from both media and researchers
 
 *Coming soon.*
 
+## References
+
+Agha, N., & Berri, D. (2023). Demand for basketball: A comparison of the WNBA and NBA. *International Journal of Sport Finance, 18*(1), 35–44. https://doi.org/10.32731/IJSF.181.022023.03
+
+Buraimo, B., & Simmons, R. (2015). Uncertainty of outcome or star quality? Television audience demand for English Premier League football. *International Journal of the Economics of Business, 22*(3), 449–469. https://doi.org/10.1080/13571516.2015.1010282
+
+Cooky, C., Council, L. D., Mears, M. A., & Messner, M. A. (2021). One and done: The long eclipse of women's televised sports, 1989–2019. *Communication & Sport, 9*(3), 347–371. https://doi.org/10.1177/21674795211003524
+
+Hausman, J. A., & Leonard, G. K. (1997). Superstars in the National Basketball Association: Economic value and policy. *Journal of Labor Economics, 15*(4), 586–624. https://doi.org/10.1086/209839
+
+Konjer, M., Meier, H. E., & Wedeking, K. (2017). Consumer demand for telecasts of tennis matches in Germany. *Journal of Sports Economics, 18*(4), 351–375. https://doi.org/10.1177/1527002515577882
+
+Pagels, J. (2018). Competition between sports hurts TV ratings: How to shift league calendars to optimize viewership. *Journal of Sports Analytics, 4*(3), 193–199. https://doi.org/10.3233/JSA-170117
+
+Tainsky, S., Xu, J., & Zhou, Y. (2014). Qualifying the game uncertainty effect: A game-level analysis of NFL postseason broadcast ratings. *Journal of Sports Economics, 15*(3), 219–236. https://doi.org/10.1177/1527002512457946
+
 ---
 
 ## About
