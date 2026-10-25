@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw files loaded unchanged by ingestion/load_raw.py. Every table has _SOURCE_FILE (file the row came from) and _LOADED_AT (when the load ran)."
+    database: WNBA
+    schema: RAW
+    tables:
+      - name: wnba_schedule
+        description: "wehoop WNBA schedules, 2023-2025 seasons. One row per game."
+      - name: player_box
+        description: "wehoop WNBA player box scores, 2024-2025 seasons. One row per player per game."
+      - name: wnba_elo
+        description: "FiveThirtyEight WNBA Elo ratings (wnba_elo.csv)."
+      - name: nfl_games
+        description: "nflverse NFL schedule and results, 1999 onward (nfldata games.csv). Used for kickoff-time overlap with WNBA telecasts."

@@ -1,2 +1,5 @@
 dbt-core==1.12.5
 dbt-snowflake==1.12.1
+snowflake-connector-python[pandas]==4.8.0
+pandas==2.3.3
+pyarrow==26.0.0
