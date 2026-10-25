@@ -1,0 +1,15 @@
+# Raw data (kept local; see How to run it for sources)
+data/raw/
+
+# Python
+__pycache__/
+.venv/
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# Secrets
+.env
+profiles.yml
