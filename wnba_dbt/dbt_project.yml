@@ -6,7 +6,7 @@ profile: wnba_dbt
 
 model-paths: ["models"]
 seed-paths: ["seeds"]
-test-paths: ["test"]
+test-paths: ["tests"]
 macro-paths: ["macros"]
 
 clean-targets: ["target", "dbt_packages"]
