@@ -1,0 +1,12 @@
+name: wnba_dbt
+version: "1.0.0"
+config-version: 2
+
+profile: wnba_dbt
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["test"]
+macro-paths: ["macros"]
+
+clean-targets: ["target", "dbt_packages"]
