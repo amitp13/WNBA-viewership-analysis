@@ -33,13 +33,13 @@ The **schedule** is the backbone: one row per WNBA game. Everything else gets ma
 | TYPE_ABBREVIATION | Short label for TYPE_ID (STD, ALLSTAR, CC, RD16, SEMI, FINAL). RD16 is the first round despite the name |
 | NOTES_HEADLINE | Free-text note. The only marker of Commissioner's Cup group-stage games ("WNBA Commissioner's Cup") and of playoff game numbers |
 | GAME_DATE | Date of the game |
-| GAME_DATE_TIME | Exact start moment. Stored as TIMESTAMP_LTZ, so it displays in whatever time zone the session uses; staging converts it to Eastern |
+| GAME_DATE_TIME | Exact start moment. Stored as TIMESTAMP_LTZ, so it displays in the session's time zone: "2023-09-10 10:00:00 -0700" is shown in Pacific and is 1:00 pm Eastern. Staging converts it to Eastern |
 | HOME_ID, AWAY_ID | ESPN team IDs |
 | HOME_DISPLAY_NAME, AWAY_DISPLAY_NAME | Full team names, for example "Indiana Fever" |
 | HOME_ABBREVIATION, AWAY_ABBREVIATION | Short team codes |
 | HOME_SCORE, AWAY_SCORE | Final scores |
 | NEUTRAL_SITE | True if played at neither team's home arena |
-| BROADCAST_NAME, BROADCAST_MARKET | Network and whether it was national or local, per ESPN (*unverified*; will be checked against the telecasts seed) |
+| BROADCAST_NAME, BROADCAST_MARKET | Network and "national" or local, per ESPN. "National" includes streaming (Prime Video, ESPN3), so this cannot define a national telecast on its own; the telecasts seed decides |
 | ATTENDANCE | Crowd at the arena (*not checked yet*) |
 
 Dropped: ID (identical to GAME_ID on every row), UID, colors, logos, linescores, clock and status details, JSON flags.
@@ -59,10 +59,9 @@ Dropped: ID (identical to GAME_ID on every row), UID, colors, logos, linescores,
 | OPPONENT_TEAM_ID | The other team |
 | HOME_AWAY | Whether the player's team was home or away |
 | DID_NOT_PLAY | True if the player was listed but did not play |
-| REASON | Why she did not play, for example "RIGHT GROIN" |
-| MINUTES | Minutes played |
-| STARTER | True if she started |
-| ACTIVE | Whether she was on the active list (*unverified*) |
+| REASON | Free text such as "COACH'S DECISION" or "RIGHT GROIN". Filled in even for players who played, so it only means something when DID_NOT_PLAY is true |
+| MINUTES | Minutes played; empty when the player did not play |
+| ACTIVE | **Not used.** Unreliable: Napheesa Collier started and played 44 minutes (game 401726992) with ACTIVE = false |
 | POINTS, REBOUNDS, ASSISTS and other stats | Standard box score stats; not central to this project |
 
 **Important:** a player who sits out does not always get a row. Clark had no row at all for 9 Fever games in 2025, all away games. So "was she available?" is answered by starting from every game her team played and looking for her row. No row means she did not play. A player who plays always has a row.
@@ -79,7 +78,7 @@ Dropped: ID (identical to GAME_ID on every row), UID, colors, logos, linescores,
 | DATE | Game date, stored as text in YYYY-MM-DD format |
 | PLAYOFF | 1 for playoff games |
 | NEUTRAL | Neutral site flag (*unverified*) |
-| HOME_TEAM, AWAY_TEAM | Team names in FiveThirtyEight's spelling, which differs from ESPN's |
+| HOME_TEAM, AWAY_TEAM | Team names in FiveThirtyEight's spelling. Active franchises appear under their current name even in early years (1997 shows "Las Vegas Aces"; *unverified* which franchise that is), while defunct teams keep their own names |
 | HOME_TEAM_ABBR, AWAY_TEAM_ABBR | FiveThirtyEight's team codes |
 | HOME_TEAM_PREGAME_RATING, AWAY_TEAM_PREGAME_RATING | Each team's Elo going into the game. This is what measures matchup quality |
 | HOME_TEAM_WINPROB, AWAY_TEAM_WINPROB | Chance each team wins, based on the ratings |
@@ -101,7 +100,7 @@ Dropped: ID (identical to GAME_ID on every row), UID, colors, logos, linescores,
 | GAME_TYPE | REG = regular season; WC, DIV, CON, SB = playoff rounds through the Super Bowl. **No preseason** |
 | GAMEDAY | Date, stored as text |
 | WEEKDAY | Day of the week |
-| GAMETIME | Kickoff time, stored as text. Assumed Eastern (*unverified*; to be checked against a game with a known kickoff) |
+| GAMETIME | Kickoff time, stored as text. Empty in early seasons (1999 sample). Assumed Eastern (*unverified*; to be checked against a game with a known kickoff) |
 | HOME_TEAM, AWAY_TEAM | NFL team codes |
 | HOME_SCORE, AWAY_SCORE | Scores; empty for games not played yet (the 2026 season) |
 
