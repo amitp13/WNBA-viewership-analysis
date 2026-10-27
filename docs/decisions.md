@@ -45,6 +45,5 @@
 | C | Missing box score rows cluster in away games; cause unverified | Logged only; does not affect the design |
 | D | 2025 = 13 teams x 44 games; 286 matches the arithmetic but is not verified from a league source | Open; verify before the README cites it |
 | E | Include All-Star and the Cup Championship in scope? | **Closed Oct 27:** see Schedule scope |
-| F | Convert GAME_DATE_TIME (TIMESTAMP_LTZ) to Eastern | Open; schedule staging model |
-| G | Is NFL GAMETIME Eastern? 09:30 fits London games in ET; 22:00 in 2025 looks odd | Open; NFL staging model |
+| F | Convert GAME_DATE_TIME (TIMESTAMP_LTZ) to Eastern | **Closed Oct 27:** start_time_et in stg_wehoop__schedule. ESPN's game_date equals the Eastern date on every game, so it is safe to match on. Early (11:00 to 11:30 am, July weekdays) and late (10:30 to 11 pm, West Coast home games) starts checked and look real |
 | H | Verify FiveThirtyEight's Elo method (K = 28, half-rating carryover) from their own source | Open; Elo extension |
