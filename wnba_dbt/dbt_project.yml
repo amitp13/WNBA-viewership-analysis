@@ -22,3 +22,7 @@ models:
     marts:
       +materialized: table
       +schema: marts
+
+seeds:
+  wnba_dbt:
+    +schema: seeds
