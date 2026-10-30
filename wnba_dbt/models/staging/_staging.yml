@@ -34,14 +34,22 @@ models:
           - not_null
 
       - name: home_team_id
-        description: "ESPN team ID of the home team."
+        description: "ESPN team ID of the home team. Maps to team_map.espn_team_id."
         data_tests:
           - not_null
+          - relationships:
+              arguments:
+                to: ref('team_map')
+                field: espn_team_id
 
       - name: away_team_id
-        description: "ESPN team ID of the away team."
+        description: "ESPN team ID of the away team. Maps to team_map.espn_team_id."
         data_tests:
           - not_null
+          - relationships:
+              arguments:
+                to: ref('team_map')
+                field: espn_team_id
 
       - name: notes_headline
         description: "ESPN's free-text note, e.g. 'WNBA Semifinals - Game 5'. Kept for tracing."

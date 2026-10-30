@@ -36,6 +36,20 @@
 | Playoffs | Keep | Yes | Only if in telecasts seed |
 | All-Star | Drop | No | No |
 
+## Team mapping (Oct 30, 2026)
+
+**One team key per franchise, defined in seeds/team_map.csv.** The key is the team nickname in lowercase (aces, sun), so it does not depend on any source's codes. Every model and the telecasts seed use it.
+
+**wehoop maps on ESPN team_id, not abbreviation.** ESPN changed Connecticut's abbreviation from CONN (2023) to CON (2024 onward) while keeping team_id 18. Mapping on abbreviation would have split one franchise into two.
+
+**FiveThirtyEight maps on its own codes or names.** Names match ESPN for all 12 teams in 2021 and 2022, but 5 codes differ (LVA/LV, LAS/LA, NYL/NY, PHO/PHX, WAS/WSH), so joining on codes without the map would silently drop those teams. FiveThirtyEight's older history (for example 1997 rows labeled "Las Vegas Aces") does not matter here, because the project uses 2021 onward.
+
+**Golden State has no FiveThirtyEight row.** The team joined in 2025, after the Elo file ends, so its Elo starts fresh in 2025.
+
+**NFL teams are not mapped.** NFL games are only matched to WNBA games by time overlap, never by team. This narrows the original plan, which said every source would use one team key.
+
+**Tests:** team_key and espn_team_id are unique and not null; fivethirtyeight_abbr is unique (nulls allowed, for Golden State). Relationships tests confirm every home and away team in stg_wehoop__schedule exists in team_map.
+
 ## Open items
 
 | # | Item | Status |
@@ -43,7 +57,7 @@
 | A | 2023 has 241 regular season games vs 240 in 2024 | Open; resolve during the Elo extension (2023 feeds Elo) |
 | B | Clark has 45 rows but only 44 in Fever games | **Closed Oct 27:** the extra row is the 2025 All-Star game (TEAM CLARK) |
 | C | Missing box score rows cluster in away games; cause unverified | Logged only; does not affect the design |
-| D | 2025 = 13 teams x 44 games; 286 matches the arithmetic but is not verified from a league source | Open; verify before the README cites it |
+| D | 2025 = 13 teams x 44 games; 286 matches the arithmetic but is not verified from a league source | Partly confirmed Oct 30: the schedule has 12 teams in 2023 and 2024 and 13 in 2025. Games per team still unchecked |
 | E | Include All-Star and the Cup Championship in scope? | **Closed Oct 27:** see Schedule scope |
 | F | Convert GAME_DATE_TIME (TIMESTAMP_LTZ) to Eastern | **Closed Oct 27:** start_time_et in stg_wehoop__schedule. ESPN's game_date equals the Eastern date on every game, so it is safe to match on. Early (11:00 to 11:30 am, July weekdays) and late (10:30 to 11 pm, West Coast home games) starts checked and look real |
 | H | Verify FiveThirtyEight's Elo method (K = 28, half-rating carryover) from their own source | Open; Elo extension |

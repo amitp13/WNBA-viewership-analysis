@@ -1,0 +1,22 @@
+version: 2
+
+seeds:
+  - name: team_map
+    description: "One row per WNBA franchise. Maps each source's team identifier to our own team_key. See docs/decisions.md."
+    columns:
+      - name: team_key
+        description: "Our team key, the franchise nickname in lowercase. Used by every model and the telecasts seed."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: espn_team_id
+        description: "ESPN team ID, used to map wehoop rows. IDs are stable even when ESPN changes abbreviations (CONN to CON in 2024)."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: fivethirtyeight_abbr
+        description: "FiveThirtyEight team code, used to map Elo rows. Null for Golden State, which joined in 2025 after the Elo file ends."
+        data_tests:
+          - unique
