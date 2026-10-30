@@ -53,3 +53,41 @@ models:
 
       - name: notes_headline
         description: "ESPN's free-text note, e.g. 'WNBA Semifinals - Game 5'. Kept for tracing."
+
+
+  - name: stg_wehoop__player_box
+    description: "One row per player per game, 2024-2025, from wehoop/ESPN. Includes All-Star game rows (teams like TEAM CLARK); they drop out when joined to stg_wehoop__schedule, which has no All-Star games."
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - game_id
+              - athlete_id
+    columns:
+      - name: game_id
+        description: "ESPN game ID. Matches stg_wehoop__schedule.game_id."
+        data_tests:
+          - not_null
+
+      - name: athlete_id
+        description: "ESPN player ID (Caitlin Clark = 4433403)."
+        data_tests:
+          - not_null
+
+      - name: team_id
+        description: "ESPN team ID of the player's team in this game."
+        data_tests:
+          - not_null
+
+      - name: did_not_play
+        description: "True if the player was listed but did not play. A player who sat out may also have no row at all."
+        data_tests:
+          - not_null
+
+      - name: dnp_reason
+        description: "Why the player did not play. Null for players who played."
+
+      - name: is_home
+        description: "True if the player's team was the home team."
+        data_tests:
+          - not_null
