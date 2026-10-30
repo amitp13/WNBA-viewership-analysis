@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: stg_wehoop__schedule
+    description: "One row per WNBA game, 2023-2025, from wehoop/ESPN. All-Star games removed. See docs/decisions.md."
+    columns:
+      - name: game_id
+        description: "ESPN game ID. Primary key."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: game_type
+        description: "Our label for ESPN's type_id. Null means an unknown new type appeared."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['regular_season', 'commissioners_cup_final', 'first_round', 'semifinals', 'finals']
+
+      - name: is_playoff
+        description: "True for first round, semifinals and finals."
+        data_tests:
+          - not_null
+
+      - name: is_commissioners_cup
+        description: "True for Cup group-stage games and the Cup final."
+        data_tests:
+          - not_null
+
+      - name: start_time_et
+        description: "Tip-off in US Eastern time, no time zone attached."
+        data_tests:
+          - not_null
+
+      - name: home_team_id
+        description: "ESPN team ID of the home team."
+        data_tests:
+          - not_null
+
+      - name: away_team_id
+        description: "ESPN team ID of the away team."
+        data_tests:
+          - not_null
+
+      - name: notes_headline
+        description: "ESPN's free-text note, e.g. 'WNBA Semifinals - Game 5'. Kept for tracing."
