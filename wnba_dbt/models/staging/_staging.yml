@@ -91,3 +91,47 @@ models:
         description: "True if the player's team was the home team."
         data_tests:
           - not_null
+
+  - name: stg_fivethirtyeight__elo
+    description: "FiveThirtyEight WNBA Elo, 2021-2022 only. One row per game. 2021 seeds the 2022 backtest; end-of-2022 ratings seed the 2023-2025 extension. See docs/decisions.md."
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [game_date, home_team_abbr, away_team_abbr]
+    columns:
+      - name: game_date
+        description: "Game date, converted from text."
+        data_tests:
+          - not_null
+      - name: is_playoff
+        description: "True for playoff games."
+        data_tests:
+          - not_null
+      - name: is_commissioners_cup_final
+        description: "True for the Commissioner's Cup Championship, one per season."
+        data_tests:
+          - not_null
+      - name: home_team_abbr
+        description: "FiveThirtyEight code for the home team. Maps to team_map.fivethirtyeight_abbr."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('team_map')
+                field: fivethirtyeight_abbr
+      - name: away_team_abbr
+        description: "FiveThirtyEight code for the away team. Maps to team_map.fivethirtyeight_abbr."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('team_map')
+                field: fivethirtyeight_abbr
+      - name: home_elo_pre
+        description: "Home team's Elo going into the game."
+        data_tests:
+          - not_null
+      - name: away_elo_pre
+        description: "Away team's Elo going into the game."
+        data_tests:
+          - not_null

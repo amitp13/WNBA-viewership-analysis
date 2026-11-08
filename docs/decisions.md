@@ -50,6 +50,18 @@
 
 **Tests:** team_key and espn_team_id are unique and not null; fivethirtyeight_abbr is unique (nulls allowed, for Golden State). Relationships tests confirm every home and away team in stg_wehoop__schedule exists in team_map.
 
+## Elo staging (Nov 8, 2026)
+
+**Kept 2021 and 2022 only.** 2021 seeds the 2022 backtest; end-of-2022 ratings seed the 2023-2025 extension.
+
+**Row check:** 450 games. 408 regular season matches the arithmetic exactly (2021: 12 teams x 32 games / 2 = 192; 2022: 12 x 36 / 2 = 216), plus 2 Cup finals and 40 playoff games.
+
+**PLAYOFF and COMMISSIONERS_CUP_FINAL are stored as 0/1 numbers.** Staging turns them into true/false (is_playoff, is_commissioners_cup_final) to match the schedule model.
+
+**Dropped NEUTRAL.** It is 0 on all 450 games in 2021-2022, so it carries no information. If the extension needs neutral sites, it uses NEUTRAL_SITE from the schedule.
+
+**Team codes stay as FiveThirtyEight's own.** Mapping to team_key happens in intermediate, the same way schedule staging keeps ESPN IDs. Relationships tests confirm every code exists in team_map.
+
 ## Open items
 
 | # | Item | Status |
