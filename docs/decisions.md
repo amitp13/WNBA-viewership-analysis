@@ -62,6 +62,16 @@
 
 **Team codes stay as FiveThirtyEight's own.** Mapping to team_key happens in intermediate, the same way schedule staging keeps ESPN IDs. Relationships tests confirm every code exists in team_map.
 
+## NFL staging (Nov 8, 2026)
+
+**Kickoff times are Eastern (confirmed).** In September and October of 2024 and 2025, the most common Sunday kickoff is 13:00 (119 of 246 games), which is the standard 1:00 pm Eastern window. Other slots fit too: 16:05 and 16:25 Sunday afternoon, 20:15 Monday and Thursday nights, 20:20 Sunday night, and 09:30 Sunday for international games.
+
+**No Saturday NFL games in September or October** of either season, so Saturday WNBA games never face NFL competition.
+
+**Kept calendar years 2024 and 2025 only,** filtered on game date, not season, because an NFL season runs into the next calendar year. This also drops the unplayed 2026 games.
+
+**Staging builds kickoff_et only.** Deciding when an NFL game "overlaps" a WNBA telecast needs an assumption about how long an NFL broadcast lasts, so that rule lives in intermediate.
+
 ## Open items
 
 | # | Item | Status |

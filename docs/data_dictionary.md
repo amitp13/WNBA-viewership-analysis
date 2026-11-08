@@ -100,7 +100,7 @@ Dropped: ID (identical to GAME_ID on every row), UID, colors, logos, linescores,
 | GAME_TYPE | REG = regular season; WC, DIV, CON, SB = playoff rounds through the Super Bowl. **No preseason** |
 | GAMEDAY | Date, stored as text |
 | WEEKDAY | Day of the week |
-| GAMETIME | Kickoff time, stored as text. Empty in early seasons (1999 sample). Assumed Eastern (*unverified*; to be checked against a game with a known kickoff) |
+| GAMETIME | Kickoff time, stored as 24-hour text ("13:00"). Empty in early seasons (1999 sample). Eastern time, confirmed Nov 8, 2026: the most common Sunday kickoff in Sep-Oct 2024-2025 is 13:00, the standard 1:00 pm Eastern window |
 | HOME_TEAM, AWAY_TEAM | NFL team codes |
 | HOME_SCORE, AWAY_SCORE | Scores; empty for games not played yet (the 2026 season) |
 

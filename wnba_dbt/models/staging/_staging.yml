@@ -54,7 +54,6 @@ models:
       - name: notes_headline
         description: "ESPN's free-text note, e.g. 'WNBA Semifinals - Game 5'. Kept for tracing."
 
-
   - name: stg_wehoop__player_box
     description: "One row per player per game, 2024-2025, from wehoop/ESPN. Includes All-Star game rows (teams like TEAM CLARK); they drop out when joined to stg_wehoop__schedule, which has no All-Star games."
     data_tests:
@@ -133,5 +132,29 @@ models:
           - not_null
       - name: away_elo_pre
         description: "Away team's Elo going into the game."
+        data_tests:
+          - not_null
+
+  - name: stg_nfl__games
+    description: "NFL games played in calendar years 2024 and 2025, from nflverse. One row per game. Used only to check whether an NFL game overlapped a WNBA telecast. Kickoff times are Eastern. See docs/decisions.md."
+    columns:
+      - name: game_id
+        description: "nflverse game ID. Primary key."
+        data_tests:
+          - unique
+          - not_null
+      - name: game_type
+        description: "REG = regular season; WC, DIV, CON, SB = playoff rounds. The file has no preseason."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['REG', 'WC', 'DIV', 'CON', 'SB']
+      - name: game_date
+        description: "Game date, converted from text."
+        data_tests:
+          - not_null
+      - name: kickoff_et
+        description: "Kickoff in US Eastern time, built from gameday plus gametime."
         data_tests:
           - not_null
