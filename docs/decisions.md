@@ -83,6 +83,26 @@ These rules decide what goes into seeds/telecasts.csv. Each row is one national 
 5. **Sources, in order.** The network's own press room (ESPN Press Room for ABC, ESPN and ESPN2), then Sports Media Watch, then Front Office Sports. One link per row, to the article that gives that game's number.
 6. **No published number.** The game stays. viewers, measurement and source_url are blank, notes = "not published". This keeps coverage measurable ("X of Y national games had a published audience").
 
+## National game list (Nov 11, 2026)
+
+**Network names kept (7):** ABC, CBS, CBSSN (CBS Sports Network), ESPN, ESPN2, ION, NBA TV. Filtered on BROADCAST_NAME, not BROADCAST_MARKET, because "national" also includes streaming.
+
+**Dropped:** WNBA League Pass, Prime Video and ESPN3 (streaming); MNMT, WWOR-TV and KFAA-TV (local channels). Each game has exactly one broadcast name, so a national game listed under a local or streaming name would be missed; rechecked in step 4.9.
+
+**Result:** 303 national TV games, no duplicates. 2024: 145. 2025: 158.
+
+| Network | 2024 | 2025 |
+|---|---|---|
+| ABC | 12 | 16 |
+| CBS | 8 | 9 |
+| CBSSN | 12 | 11 |
+| ESPN | 27 | 27 |
+| ESPN2 | 7 | 6 |
+| ION | 43 | 50 |
+| NBA TV | 36 | 39 |
+
+**Checked against ESPN's published 2025 counts:** 25 regular season games on ABC, ESPN and ESPN2, 12 of them on ABC, and 24 postseason games ([ESPN Press Room](https://espnpressroom.com/press-release/espn-networks-deliver-most-watched-wnba-regular-season-ever/), [ESPN Press Room](https://espnpressroom.com/press-release/espns-monumental-wnba-season-sets-new-viewership-records/)). All three match. The 2025 Finals networks match game by game ([Front Office Sports](https://frontofficesports.com/?p=205896)).
+
 ## Open items
 
 | # | Item | Status |
