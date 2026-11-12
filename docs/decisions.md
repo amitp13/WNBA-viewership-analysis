@@ -141,6 +141,14 @@ Source: FiveThirtyEight, "How Our WNBA Predictions Work" ([archived copy](https:
 
 **Staging now keeps only completed games** (STATUS_TYPE_COMPLETED = true). Across 2023 to 2025, the postponed game is the only one not marked STATUS_FINAL, and the only 0-0 game. Filtering on status rather than one game ID also catches any future postponement. After the fix, every team has 40 regular season games in 2023 and 2024.
 
+## Elo backtest (Nov 12, 2026)
+
+**The between-seasons rule matches FiveThirtyEight's data exactly.** For all 12 teams, the first 2022 rating equals 0.5 x the last 2021 rating + 750 (differences around 1e-12, rounding noise).
+
+**int_elo_by_game reproduces FiveThirtyEight's 2022 season.** Starting from their end-of-2021 ratings and replaying all 240 games of 2022 (regular season, Commissioner's Cup final and playoffs), the largest difference from their published pregame and postgame ratings is about 2e-11 Elo points, and about 4e-14 for win probability. This confirms every part of the method in "Elo method", including home court and the playoff factor in the rating update.
+
+**Test: tests/assert_elo_matches_fivethirtyeight_2022.sql.** It fails if any 2022 game is missing on either side or differs by more than 0.001 Elo points. The tolerance is far above rounding noise and far below a real error. Proven to work: with K changed from 28 to 29, all 240 games failed; with K back at 28, it passes.
+
 ## Open items
 
 | # | Item | Status |
