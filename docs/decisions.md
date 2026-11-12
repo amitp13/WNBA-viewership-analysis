@@ -72,6 +72,17 @@
 
 **Staging builds kickoff_et only.** Deciding when an NFL game "overlaps" a WNBA telecast needs an assumption about how long an NFL broadcast lasts, so that rule lives in intermediate.
 
+## Viewership table rules (Nov 11, 2026)
+
+These rules decide what goes into seeds/telecasts.csv. Each row is one national TV broadcast of one game.
+
+1. **Which games count.** Every 2024 or 2025 regular season or playoff game on a national TV network: ABC, CBS, ESPN, ESPN2, ION, NBA TV, and CBS Sports Network if it appears in the schedule. ESPN and ESPN2 are separate network values. Streaming-only games (for example Prime Video) are left out. If a TV game was also streamed, the row uses the TV network. Step 4.2 confirms the exact network names from the schedule.
+2. **Teams.** home_team and away_team use team_key from team_map (fever, sky).
+3. **Viewers.** Whole number (2700000, not 2.7M). If the source only gives a rounded figure, notes = "rounded".
+4. **Measurement.** Column measurement = panel or big_data_panel. Record the number exactly as the source reports it, never adjusted. Nielsen made Big Data + Panel the official number on Sept 1, 2025 ([Nielsen](https://www.nielsen.com/news-center/2025/nielsen-begins-updated-era-of-tv-ratings-with-big-data-panel-for-this-falls-tv-season)), and most 2025 regular season figures are panel only ([Sports Media Watch](https://www.sportsmediawatch.com/2025/10/wnba-playoff-ratings-aces-fever-game-five-viewership/)). The switch happened partway through 2025, not between seasons, so the regression needs a measurement flag on top of the season fixed effect. If a source gives both numbers, use big_data_panel and put the panel number in notes.
+5. **Sources, in order.** The network's own press room (ESPN Press Room for ABC, ESPN and ESPN2), then Sports Media Watch, then Front Office Sports. One link per row, to the article that gives that game's number.
+6. **No published number.** The game stays. viewers, measurement and source_url are blank, notes = "not published". This keeps coverage measurable ("X of Y national games had a published audience").
+
 ## Open items
 
 | # | Item | Status |
