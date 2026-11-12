@@ -149,6 +149,8 @@ Source: FiveThirtyEight, "How Our WNBA Predictions Work" ([archived copy](https:
 
 **Test: tests/assert_elo_matches_fivethirtyeight_2022.sql.** It fails if any 2022 game is missing on either side or differs by more than 0.001 Elo points. The tolerance is far above rounding noise and far below a real error. Proven to work: with K changed from 28 to 29, all 240 games failed; with K back at 28, it passes.
 
+**Extended to 2025 (Nov 12).** The same model continues 2023 to 2025 from stg_wehoop__schedule, with the half-to-1500 rule each season; row counts match the schedule (261, 263, 311). Golden State starts at 1300. One neutral site, set by game ID: Storm vs Dream in Vancouver, Aug 15, 2025 ([Destination Vancouver](https://destinationvancouver.com/events/WNBA-Canada-Game-Atlanta-Dream-vs-Seattle-Storm-250815)). ESPN also flags Sky at Mystics on June 6, 2024, but that was a Washington home game at another DC arena ([FOX 5 DC](https://fox5dc.com/news/angel-reese-and-kamilla-cardoso-of-chicago-sky-head-to-dc-mystics-move-showdown-to-capital-one-arena)), so the flag isn't used.
+
 ## Open items
 
 | # | Item | Status |
