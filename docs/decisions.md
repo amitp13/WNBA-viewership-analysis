@@ -123,6 +123,18 @@ Source: FiveThirtyEight, "How Our WNBA Predictions Work" ([archived copy](https:
 
 **Team codes in the file follow the current franchise.** For example, LVA appears in 1997, so expansion was identified by first appearance, not by code.
 
+## Where Elo runs (Nov 11, 2026)
+
+**Elo is a dbt Python model** (int_elo_by_game.py), not SQL. Each game's rating depends on the result of the game before it, which SQL handles poorly. Options compared:
+
+| Option | Why not chosen / chosen |
+|---|---|
+| dbt Python model | **Chosen.** Reads the staging models with ref(), so it stays in dbt's lineage and dbt tests run on its output |
+| Recursive SQL | Carries all 13 teams' ratings through every game; hard to read and explain |
+| Python script saved as a seed | Breaks lineage: dbt cannot tell when the CSV is out of date, and the script reads files outside dbt |
+
+**No pandas.** A test model returning a pandas table failed when Snowpark saved it (TypeError: create_dataframe() did not accept the pandas DataFrame); the same model returning a Snowpark table built in 7 seconds. The Elo loop uses plain Python lists and returns a Snowpark table, so no extra packages are needed.
+
 ## Open items
 
 | # | Item | Status |
