@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: int_elo_by_game
+    description: "Pregame and postgame Elo for both teams in every game, 2022-2025, using FiveThirtyEight's method. 2022 is checked against FiveThirtyEight by tests/assert_elo_matches_fivethirtyeight_2022.sql. See docs/decisions.md, 'Elo method' and 'Elo backtest'."
+    columns:
+      - name: game_id
+        description: "ESPN game ID. Blank for 2022 (FiveThirtyEight's file has no ESPN IDs)."
+        data_tests:
+          - unique
+          - not_null:
+              config:
+                where: "season >= 2023"
+
+      - name: home_team
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('team_map')
+                field: team_key
+
+      - name: away_team
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('team_map')
+                field: team_key
+
+      - name: home_elo_pre
+        data_tests:
+          - not_null
+      - name: away_elo_pre
+        data_tests:
+          - not_null
+      - name: home_win_prob
+        data_tests:
+          - not_null
