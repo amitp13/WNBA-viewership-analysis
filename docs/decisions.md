@@ -105,7 +105,7 @@ These rules decide what goes into seeds/telecasts.csv. Each row is one national 
 
 ## Elo method (Nov 11, 2026)
 
-Source: FiveThirtyEight, "How Our WNBA Predictions Work" ([archived copy](WAYBACK_LINK_HERE)). The live page now redirects to ABC News, so the archived copy is the reference.
+Source: FiveThirtyEight, "How Our WNBA Predictions Work" ([archived copy](https://web.archive.org/web/2022/https://fivethirtyeight.com/methodology/how-our-wnba-predictions-work/)). The live page now redirects to ABC News, so the archived copy is the reference.
 
 | Part | Rule |
 |---|---|
@@ -133,4 +133,4 @@ Source: FiveThirtyEight, "How Our WNBA Predictions Work" ([archived copy](WAYBAC
 | D | 2025 = 13 teams x 44 games; 286 matches the arithmetic but is not verified from a league source | Partly confirmed Oct 30: the schedule has 12 teams in 2023 and 2024 and 13 in 2025. Games per team still unchecked |
 | E | Include All-Star and the Cup Championship in scope? | **Closed Oct 27:** see Schedule scope |
 | F | Convert GAME_DATE_TIME (TIMESTAMP_LTZ) to Eastern | **Closed Oct 27:** start_time_et in stg_wehoop__schedule. ESPN's game_date equals the Eastern date on every game, so it is safe to match on. Early (11:00 to 11:30 am, July weekdays) and late (10:30 to 11 pm, West Coast home games) starts checked and look real |
-| H | Verify FiveThirtyEight's Elo method (K = 28, half-rating carryover) from their own source | Open; Elo extension |
+| H | Verify FiveThirtyEight's Elo method (K = 28, half-rating carryover) from their own source | **Closed Nov 11:** see Elo method |
