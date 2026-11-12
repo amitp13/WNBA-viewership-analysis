@@ -103,6 +103,26 @@ These rules decide what goes into seeds/telecasts.csv. Each row is one national 
 
 **Checked against ESPN's published 2025 counts:** 25 regular season games on ABC, ESPN and ESPN2, 12 of them on ABC, and 24 postseason games ([ESPN Press Room](https://espnpressroom.com/press-release/espn-networks-deliver-most-watched-wnba-regular-season-ever/), [ESPN Press Room](https://espnpressroom.com/press-release/espns-monumental-wnba-season-sets-new-viewership-records/)). All three match. The 2025 Finals networks match game by game ([Front Office Sports](https://frontofficesports.com/?p=205896)).
 
+## Elo method (Nov 11, 2026)
+
+Source: FiveThirtyEight, "How Our WNBA Predictions Work" ([archived copy](WAYBACK_LINK_HERE)). The live page now redirects to ABC News, so the archived copy is the reference.
+
+| Part | Rule |
+|---|---|
+| Starting rating | League average is 1500; every team started at 1500 in 1997 |
+| Win probability | Pr(A) = 1 / (10^(-EloDiff / 400) + 1), where EloDiff = A's pregame Elo minus B's, after adjustments |
+| Home court | +80 to the home team's side of EloDiff |
+| Playoffs | EloDiff (after home court) x 1.25 |
+| K-factor | 28 |
+| Margin of victory multiplier | (winning margin + 3)^0.8 / (7.5 + 0.006 x EloDiff), EloDiff from the winner's side (negative when the underdog wins) |
+| Update | shift = 28 x margin multiplier x (1 - winner's pregame win probability). Winner gains the shift, loser loses it |
+| Between seasons | New preseason rating = 0.5 x last postgame rating + 0.5 x 1500 |
+| New team | Not stated on the page. FiveThirtyEight's own file starts all 10 expansion teams (1998 to 2008) at 1300 in their first game, so Golden State starts 2025 at 1300 |
+
+**Home court and the playoff factor change the rating update, not only the prediction.** Both adjust EloDiff, and EloDiff feeds the win probability and the margin multiplier.
+
+**Team codes in the file follow the current franchise.** For example, LVA appears in 1997, so expansion was identified by first appearance, not by code.
+
 ## Open items
 
 | # | Item | Status |
