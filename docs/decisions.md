@@ -135,11 +135,17 @@ Source: FiveThirtyEight, "How Our WNBA Predictions Work" ([archived copy](https:
 
 **No pandas.** A test model returning a pandas table failed when Snowpark saved it (TypeError: create_dataframe() did not accept the pandas DataFrame); the same model returning a Snowpark table built in 7 seconds. The Elo loop uses plain Python lists and returns a Snowpark table, so no extra packages are needed.
 
+## Postponed game (Nov 11, 2026)
+
+**2023 had 241 regular season games instead of 240 because of one postponed game.** Lynx at Liberty on June 7, 2023 was postponed over wildfire smoke ([Star Tribune](https://www.startribune.com/lynx-liberty-game-in-new-york-city-postponed-air-quality-alert-canadian-wildfires/600280921)) and made up on July 28 ([CBS News](https://www.cbsnews.com/minnesota/news/liberty-lynx-game-postponed-by-canada-wildfires-rescheduled-for-july-28-4)). ESPN kept the original as its own row with a 0-0 score, so the Lynx and Liberty each showed 41 games.
+
+**Staging now keeps only completed games** (STATUS_TYPE_COMPLETED = true). Across 2023 to 2025, the postponed game is the only one not marked STATUS_FINAL, and the only 0-0 game. Filtering on status rather than one game ID also catches any future postponement. After the fix, every team has 40 regular season games in 2023 and 2024.
+
 ## Open items
 
 | # | Item | Status |
 |---|---|---|
-| A | 2023 has 241 regular season games vs 240 in 2024 | Open; resolve during the Elo extension (2023 feeds Elo) |
+| A | 2023 has 241 regular season games vs 240 in 2024 | **Closed Nov 11:** one postponed game; see Postponed game |
 | B | Clark has 45 rows but only 44 in Fever games | **Closed Oct 27:** the extra row is the 2025 All-Star game (TEAM CLARK) |
 | C | Missing box score rows cluster in away games; cause unverified | Logged only; does not affect the design |
 | D | 2025 = 13 teams x 44 games; 286 matches the arithmetic but is not verified from a league source | Partly confirmed Oct 30: the schedule has 12 teams in 2023 and 2024 and 13 in 2025. Games per team still unchecked |

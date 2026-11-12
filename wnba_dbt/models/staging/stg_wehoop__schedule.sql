@@ -43,6 +43,7 @@ renamed AS (
         notes_headline
     FROM source
     WHERE type_id != 4    -- drop All-Star games (see docs/decisions.md)
+        AND status_type_completed      -- drop games never played (2023-06-07 Lynx at Liberty, postponed)
 ) 
 
 SELECT * FROM renamed
