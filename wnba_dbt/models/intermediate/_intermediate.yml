@@ -37,3 +37,28 @@ models:
       - name: home_win_prob
         data_tests:
           - not_null
+
+  - name: int_star_availability
+    description: "One row per star per game her team played, 2024-2025. Unavailable = no box score row or DID_NOT_PLAY. See docs/decisions.md, 'Star rule'."
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - game_id
+              - athlete_id
+    columns:
+      - name: game_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_wehoop__schedule')
+                field: game_id
+      - name: tier
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['superstar', 'star']
+      - name: is_available
+        data_tests:
+          - not_null
