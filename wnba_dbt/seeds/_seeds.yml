@@ -20,3 +20,30 @@ seeds:
         description: "FiveThirtyEight team code, used to map Elo rows. Null for Golden State, which joined in 2025 after the Elo file ends."
         data_tests:
           - unique
+
+
+  - name: star_tiers
+    description: "One row per player per season in a star tier. Superstar = top 2% of the final All-Star fan vote; star = previous season's All-WNBA First Team minus superstars. See docs/decisions.md, Star rule."
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - season
+              - athlete_id
+    columns:
+      - name: athlete_id
+        description: "ESPN athlete ID, matches stg_wehoop__player_box."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_wehoop__player_box')
+                field: athlete_id
+      - name: tier
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['superstar', 'star']
+      - name: source_url
+        data_tests:
+          - not_null
