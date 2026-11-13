@@ -151,6 +151,28 @@ Source: FiveThirtyEight, "How Our WNBA Predictions Work" ([archived copy](https:
 
 **Extended to 2025 (Nov 12).** The same model continues 2023 to 2025 from stg_wehoop__schedule, with the half-to-1500 rule each season; row counts match the schedule (261, 263, 311). Golden State starts at 1300. One neutral site, set by game ID: Storm vs Dream in Vancouver, Aug 15, 2025 ([Destination Vancouver](https://destinationvancouver.com/events/WNBA-Canada-Game-Atlanta-Dream-vs-Seattle-Storm-250815)). ESPN also flags Sky at Mystics on June 6, 2024, but that was a Washington home game at another DC arena ([FOX 5 DC](https://fox5dc.com/news/angel-reese-and-kamilla-cardoso-of-chicago-sky-head-to-dc-mystics-move-showdown-to-capital-one-arena)), so the flag isn't used.
 
+## Star rule (Nov 13, 2026)
+
+**Player-neutral, fixed before looking at viewership.** Star power has two parts, popularity and performance ([Grimshaw and Larson, 2021](https://doi.org/10.1177/1527002520959127)), so each gets its own tier. Defining stars by a cutoff on a distribution follows [Brandes, Franck and Nüesch (2008)](https://doi.org/10.1177/1527002507302026), who use the top 2% for superstars and test other cutoffs.
+
+| Tier | Rule (per season) | 2024 | 2025 |
+|---|---|---|---|
+| Superstar (popularity) | Top 2% of the final All-Star fan vote | Clark, Boston, Wilson | Clark, Collier, Boston |
+| Star (performance) | Previous season's All-WNBA First Team, minus superstars | Stewart, Thomas, Collier, Sabally | Wilson, Stewart, Thomas |
+| Non-star | Everyone else | | |
+
+**Cutoff from our data.** Players who played at least one game (stg_wehoop__player_box): 157 in 2024, 183 in 2025. Top 2% = rank 3 or better in both seasons (3.14 and 3.66).
+
+**Sources.** 2024 fan vote: WNBA roster release, July 2, 2024 ([WNBA](https://www.wnba.com/news/all-star-2024-selections)). 2025 fan vote ([theScore](https://thescore.com/wnba/news/3306282)). All-WNBA First Teams: [2023](https://www.wnba.com/news/2023-all-wnba-first-and-second-team), [2024](https://www.wnba.com/news/2024-all-wnba-first-and-second-team).
+
+**Why not a top 5% star tier.** The 2024 final fan vote was only published as a top five, so ranks 6 and 7 do not exist in any source. Local hero tier (best player on a team with no star) considered and dropped.
+
+**Robustness.** Rerun with the superstar tier set to the fan-vote top 5 (about 3%), which is published for both seasons.
+
+**Limitations.** Fever fans skew the fan vote (Boston is a superstar in both seasons). Fan voting closes in late June, so early-season games feed into it. Thomas and Sabally changed teams for 2025, so each player's team comes from that season's box scores.
+
+**Model: int_star_availability (Nov 13).** One row per star per team game, including the Cup final and playoffs. Regular season games played match published counts for 5 star-seasons (tests/assert_star_games_match_published.sql, sources in the file).
+
 ## Open items
 
 | # | Item | Status |
