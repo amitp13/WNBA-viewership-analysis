@@ -160,7 +160,7 @@ game_date,home_team,away_team,network,start_time_et,viewers,measurement,source_u
 2025-05-24,fever,liberty,CBS,2025-05-24 13:00:00.000,2220000,panel,https://www.sportsmediawatch.com/2025/06/fever-sky-ratings-cbs-top-ten-audience-despite-clark-absence/,rounded
 2025-05-24,dream,wings,CBSSN,2025-05-24 15:00:00.000,,,,not published
 2025-05-28,mystics,fever,NBA TV,2025-05-28 19:30:00.000,,,,not published
-2025-05-30,fever,sun,ION,2025-05-30 19:30:00.000,,,,not published
+2025-05-30,fever,sun,ION,2025-05-30 19:30:00.000,851000,panel,https://fieldlevelmedia.com/?p=395885,regional window; SMW via Field Level Media
 2025-05-30,mystics,liberty,ION,2025-05-30 19:30:00.000,,,,not published
 2025-05-30,mercury,lynx,ION,2025-05-30 22:00:00.000,,,,not published
 2025-05-30,storm,dream,ION,2025-05-30 22:00:00.000,,,,not published
@@ -192,7 +192,7 @@ game_date,home_team,away_team,network,start_time_et,viewers,measurement,source_u
 2025-06-25,aces,sun,NBA TV,2025-06-25 22:00:00.000,,,,not published
 2025-06-27,wings,fever,ION,2025-06-27 19:30:00.000,1140000,panel,https://frontofficesports.com/wnba-hits-fourth-highest-abc-viewership-with-clark-bueckers-duel/,rounded; regional window
 2025-06-27,dream,lynx,ION,2025-06-27 19:30:00.000,,,,not published
-2025-06-27,mercury,liberty,ION,2025-06-27 22:00:00.000,,,,not published
+2025-06-27,mercury,liberty,ION,2025-06-27 22:00:00.000,610000,panel,https://awfulannouncing.com/wnba/ion-draws-over-one-million-viewers-game-without-caitlin-clark.html,regional window
 2025-06-27,storm,sun,ION,2025-06-27 22:00:00.000,,,,not published
 2025-06-27,valkyries,sky,ION,2025-06-27 22:00:00.000,,,,not published
 2025-06-29,sparks,sky,ESPN,2025-06-29 16:00:00.000,,,,not published
@@ -221,7 +221,7 @@ game_date,home_team,away_team,network,start_time_et,viewers,measurement,source_u
 2025-07-28,wings,liberty,ESPN,2025-07-28 20:00:00.000,702000,panel,https://awfulannouncing.com/espn/liberty-lynx-wnba-finals-rematch-ratings.html,source not named; Awful Announcing
 2025-07-29,sparks,aces,NBA TV,2025-07-29 22:00:00.000,,,,not published
 2025-07-30,lynx,liberty,ESPN,2025-07-30 20:00:00.000,788000,panel,https://awfulannouncing.com/espn/liberty-lynx-wnba-finals-rematch-ratings.html,ESPN analyst Rebecca Lobo via Awful Announcing
-2025-08-01,wings,fever,ION,2025-08-01 19:30:00.000,,,,not published
+2025-08-01,wings,fever,ION,2025-08-01 19:30:00.000,1535000,panel,https://programminginsider.com/friday-ratings-happys-place-reruns-on-nbc-lead-all-broadcast-network-offerings-among-adults-18-49/,regional window; Programming Insider overnight
 2025-08-01,sky,valkyries,ION,2025-08-01 19:30:00.000,,,,not published
 2025-08-01,sun,liberty,ION,2025-08-01 19:30:00.000,,,,not published
 2025-08-01,dream,mercury,ION,2025-08-01 19:30:00.000,,,,not published
@@ -244,7 +244,7 @@ game_date,home_team,away_team,network,start_time_et,viewers,measurement,source_u
 2025-08-13,aces,liberty,ESPN,2025-08-13 21:30:00.000,,,,not published
 2025-08-15,wings,sparks,ION,2025-08-15 19:30:00.000,,,,not published
 2025-08-15,sky,valkyries,ION,2025-08-15 19:30:00.000,,,,not published
-2025-08-15,fever,mystics,ION,2025-08-15 19:30:00.000,,,,not published
+2025-08-15,fever,mystics,ION,2025-08-15 19:30:00.000,1119000,panel,https://programminginsider.com/friday-ratings-4-2-million-view-stand-up-to-cancer-special-across-four-broadcast-networks/,regional window; Programming Insider overnight
 2025-08-15,dream,storm,ION,2025-08-15 22:00:00.000,,,,not published
 2025-08-15,mercury,aces,ION,2025-08-15 22:00:00.000,,,,not published
 2025-08-16,lynx,liberty,CBS,2025-08-16 14:00:00.000,793000,panel,https://www.sportsmediawatch.com/2025/08/abc-wnba-most-watched-season-caitlin-clark/,
@@ -253,7 +253,7 @@ game_date,home_team,away_team,network,start_time_et,viewers,measurement,source_u
 2025-08-17,valkyries,dream,NBA TV,2025-08-17 20:30:00.000,,,,not published
 2025-08-19,liberty,lynx,NBA TV,2025-08-19 19:00:00.000,,,,not published
 2025-08-19,aces,dream,NBA TV,2025-08-19 22:00:00.000,,,,not published
-2025-08-22,fever,lynx,ION,2025-08-22 19:30:00.000,,,,not published
+2025-08-22,fever,lynx,ION,2025-08-22 19:30:00.000,963000,panel,https://programminginsider.com/friday-ratings-cbs-wins-the-nights-demos-with-preseason-football/,regional window; Programming Insider overnight
 2025-08-22,wings,storm,ION,2025-08-22 19:30:00.000,,,,not published
 2025-08-22,mercury,valkyries,ION,2025-08-22 22:00:00.000,,,,not published
 2025-08-23,dream,liberty,CBS,2025-08-23 14:00:00.000,,,,not published
@@ -264,7 +264,7 @@ game_date,home_team,away_team,network,start_time_et,viewers,measurement,source_u
 2025-08-26,sparks,mercury,NBA TV,2025-08-26 22:00:00.000,,,,not published
 2025-08-27,dream,aces,NBA TV,2025-08-27 19:30:00.000,,,,not published
 2025-08-29,dream,wings,ION,2025-08-29 19:30:00.000,,,,not published
-2025-08-29,sparks,fever,ION,2025-08-29 22:00:00.000,,,,not published
+2025-08-29,sparks,fever,ION,2025-08-29 22:00:00.000,1067000,panel,https://programminginsider.com/friday-ratings-espn-wins-second-consecutive-night-with-college-football/,Programming Insider overnight
 2025-08-30,sun,lynx,NBA TV,2025-08-30 19:00:00.000,,,,not published
 2025-08-30,mercury,liberty,NBA TV,2025-08-30 22:00:00.000,,,,not published
 2025-08-31,valkyries,fever,NBA TV,2025-08-31 20:30:00.000,,,,not published
