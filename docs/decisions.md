@@ -93,7 +93,7 @@ These rules decide what goes into seeds/telecasts.csv. Each row is one national 
 
 **Dropped:** WNBA League Pass, Prime Video and ESPN3 (streaming); MNMT, WWOR-TV and KFAA-TV (local channels). Each game has exactly one broadcast name, so a national game listed under a local or streaming name would be missed; rechecked in step 4.9.
 
-**Result:** 303 national TV games, no duplicates. 2024: 145. 2025: 158.
+**Result:** 305 national TV games. 2024: 147. 2025: 158.
 
 | Network | 2024 | 2025 |
 |---|---|---|
