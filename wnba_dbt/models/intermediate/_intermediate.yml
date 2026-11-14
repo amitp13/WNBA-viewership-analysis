@@ -62,3 +62,18 @@ models:
       - name: is_available
         data_tests:
           - not_null
+  
+  - name: int_nfl_overlap
+    description: "One row per 2024-2025 WNBA game: how many NFL games were on during its broadcast. Rule in docs/decisions.md, NFL overlap rule."
+    columns:
+      - name: game_id
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_wehoop__schedule')
+                field: game_id
+      - name: nfl_games_overlapping
+        data_tests:
+          - not_null
