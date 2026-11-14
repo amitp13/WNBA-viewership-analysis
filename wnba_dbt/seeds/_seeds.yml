@@ -47,3 +47,11 @@ seeds:
       - name: source_url
         data_tests:
           - not_null
+  
+  - name: telecasts
+    description: "One row per national TV broadcast, 2024 and 2025. Viewer numbers with one source link each. See docs/decisions.md, rules 1 to 10."
+    config:
+      column_types:
+        game_date: date
+        start_time_et: timestamp_ntz
+        viewers: number(38,0)

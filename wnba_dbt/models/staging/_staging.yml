@@ -158,3 +158,40 @@ models:
         description: "Kickoff in US Eastern time, built from gameday plus gametime."
         data_tests:
           - not_null
+  
+  - name: stg_telecasts
+    description: "One row per national TV broadcast (2024 and 2025), matched to its game. Built from the telecasts seed. See docs/decisions.md, rules 1 to 10."
+    data_tests:
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "viewers is not null or notes = 'not published'"
+    columns:
+      - name: game_id
+        description: "ESPN game ID from stg_wehoop__schedule. Empty would mean the broadcast matched no game."
+        data_tests:
+          - not_null
+          - unique
+      - name: network
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['ABC', 'CBS', 'CBSSN', 'ESPN', 'ESPN2', 'ION', 'NBA TV']
+      - name: viewers
+        description: "Average viewers, whole number. Empty when no number was published."
+        data_tests:
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 1
+      - name: measurement
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['panel', 'big_data_panel']
+          - not_null:
+              config:
+                where: "viewers is not null"
+      - name: source_url
+        data_tests:
+          - not_null:
+              config:
+                where: "viewers is not null"
