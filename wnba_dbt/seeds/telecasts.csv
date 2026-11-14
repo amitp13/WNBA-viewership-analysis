@@ -144,57 +144,57 @@ game_date,home_team,away_team,network,start_time_et,viewers,measurement,source_u
 2024-10-16,lynx,liberty,ESPN,2024-10-16 20:00:00.000,1390000,panel,https://www.sportsmediawatch.com/2024/10/wnba-finals-game-three-most-watched-23-years/,rounded
 2024-10-18,lynx,liberty,ESPN,2024-10-18 20:00:00.000,1670000,panel,https://www.sportsmediawatch.com/2024/10/wnba-finals-game-4-most-watched-since-2000-lynx-liberty/,rounded
 2024-10-20,liberty,lynx,ESPN,2024-10-20 20:00:00.000,2150000,panel,https://www.sportsmediawatch.com/2024/10/liberty-lynx-game-5-most-watched-wnba-finals-game-since-1999/,rounded
-2025-05-16,wings,lynx,ION,2025-05-16 19:30:00.000,,,,
-2025-05-16,mystics,dream,ION,2025-05-16 19:30:00.000,,,,
-2025-05-16,valkyries,sparks,ION,2025-05-16 22:00:00.000,,,,
-2025-05-17,liberty,aces,ABC,2025-05-17 13:00:00.000,,,,
-2025-05-17,fever,sky,ABC,2025-05-17 15:20:00.000,,,,
-2025-05-19,wings,storm,NBA TV,2025-05-19 20:00:00.000,,,,
-2025-05-20,fever,dream,NBA TV,2025-05-20 19:00:00.000,,,,
-2025-05-23,lynx,sun,ION,2025-05-23 19:30:00.000,,,,
-2025-05-23,storm,mercury,ION,2025-05-23 22:00:00.000,,,,
-2025-05-23,aces,mystics,ION,2025-05-23 22:00:00.000,,,,
-2025-05-23,sparks,valkyries,ION,2025-05-23 22:00:00.000,,,,
-2025-05-24,fever,liberty,CBS,2025-05-24 13:00:00.000,,,,
-2025-05-24,dream,wings,CBSSN,2025-05-24 15:00:00.000,,,,
-2025-05-28,mystics,fever,NBA TV,2025-05-28 19:30:00.000,,,,
-2025-05-30,fever,sun,ION,2025-05-30 19:30:00.000,,,,
-2025-05-30,mystics,liberty,ION,2025-05-30 19:30:00.000,,,,
-2025-05-30,mercury,lynx,ION,2025-05-30 22:00:00.000,,,,
-2025-05-30,storm,dream,ION,2025-05-30 22:00:00.000,,,,
-2025-05-30,aces,sparks,ION,2025-05-30 22:00:00.000,,,,
-2025-06-03,fever,mystics,NBA TV,2025-06-03 19:00:00.000,,,,
-2025-06-03,storm,wings,ESPN,2025-06-03 21:30:00.000,,,,
-2025-06-06,sun,dream,ION,2025-06-06 19:30:00.000,,,,
-2025-06-06,wings,sparks,ION,2025-06-06 21:30:00.000,,,,
-2025-06-07,valkyries,aces,ABC,2025-06-07 15:00:00.000,,,,
-2025-06-07,sky,fever,CBS,2025-06-07 20:00:00.000,,,,
-2025-06-10,liberty,sky,ESPN,2025-06-10 20:00:00.000,,,,
-2025-06-11,aces,sparks,CBSSN,2025-06-11 22:00:00.000,,,,
-2025-06-13,dream,sky,ION,2025-06-13 19:30:00.000,,,,
-2025-06-13,aces,wings,ION,2025-06-13 22:00:00.000,,,,
-2025-06-14,lynx,sparks,CBS,2025-06-14 13:00:00.000,,,,
-2025-06-14,fever,liberty,ABC,2025-06-14 15:00:00.000,,,,
-2025-06-15,sun,sky,CBS,2025-06-15 12:00:00.000,,,,
-2025-06-15,mystics,dream,CBSSN,2025-06-15 14:00:00.000,,,,
-2025-06-17,fever,sun,NBA TV,2025-06-17 19:00:00.000,,,,
-2025-06-17,sparks,storm,NBA TV,2025-06-17 22:00:00.000,,,,
-2025-06-20,sun,wings,ION,2025-06-20 19:30:00.000,,,,
-2025-06-20,dream,mystics,ION,2025-06-20 19:30:00.000,,,,
-2025-06-20,aces,storm,ION,2025-06-20 22:00:00.000,,,,
-2025-06-21,sky,mercury,ABC,2025-06-21 13:00:00.000,,,,
-2025-06-21,lynx,sparks,NBA TV,2025-06-21 20:00:00.000,,,,
-2025-06-22,aces,fever,ESPN,2025-06-22 15:00:00.000,,,,
-2025-06-24,sky,sparks,NBA TV,2025-06-24 20:00:00.000,,,,
-2025-06-24,storm,fever,NBA TV,2025-06-24 22:00:00.000,,,,
-2025-06-25,aces,sun,NBA TV,2025-06-25 22:00:00.000,,,,
-2025-06-27,wings,fever,ION,2025-06-27 19:30:00.000,,,,
-2025-06-27,dream,lynx,ION,2025-06-27 19:30:00.000,,,,
-2025-06-27,mercury,liberty,ION,2025-06-27 22:00:00.000,,,,
-2025-06-27,storm,sun,ION,2025-06-27 22:00:00.000,,,,
-2025-06-27,valkyries,sky,ION,2025-06-27 22:00:00.000,,,,
-2025-06-29,sparks,sky,ESPN,2025-06-29 16:00:00.000,,,,
-2025-06-29,mercury,aces,NBA TV,2025-06-29 18:00:00.000,,,,
+2025-05-16,wings,lynx,ION,2025-05-16 19:30:00.000,639000,panel,https://www.sportsmediawatch.com/2025/05/fever-sky-viewership-milestone-wnba-regular-season-clark-reese/,regional window
+2025-05-16,mystics,dream,ION,2025-05-16 19:30:00.000,,,,not published
+2025-05-16,valkyries,sparks,ION,2025-05-16 22:00:00.000,581000,panel,https://www.sportsmediawatch.com/2025/05/fever-sky-viewership-milestone-wnba-regular-season-clark-reese/,
+2025-05-17,liberty,aces,ABC,2025-05-17 13:00:00.000,1300000,panel,https://www.sportsmediawatch.com/2025/05/fever-sky-viewership-milestone-wnba-regular-season-clark-reese/,rounded
+2025-05-17,fever,sky,ABC,2025-05-17 15:20:00.000,2700000,big_data_panel,https://espnpressroom.com/press-release/espn-networks-deliver-most-watched-wnba-regular-season-ever/,rounded
+2025-05-19,wings,storm,NBA TV,2025-05-19 20:00:00.000,,,,not published
+2025-05-20,fever,dream,NBA TV,2025-05-20 19:00:00.000,,,,not published
+2025-05-23,lynx,sun,ION,2025-05-23 19:30:00.000,,,,not published
+2025-05-23,storm,mercury,ION,2025-05-23 22:00:00.000,,,,not published
+2025-05-23,aces,mystics,ION,2025-05-23 22:00:00.000,,,,not published
+2025-05-23,sparks,valkyries,ION,2025-05-23 22:00:00.000,,,,not published
+2025-05-24,fever,liberty,CBS,2025-05-24 13:00:00.000,2220000,panel,https://www.sportsmediawatch.com/2025/06/fever-sky-ratings-cbs-top-ten-audience-despite-clark-absence/,rounded
+2025-05-24,dream,wings,CBSSN,2025-05-24 15:00:00.000,,,,not published
+2025-05-28,mystics,fever,NBA TV,2025-05-28 19:30:00.000,,,,not published
+2025-05-30,fever,sun,ION,2025-05-30 19:30:00.000,,,,not published
+2025-05-30,mystics,liberty,ION,2025-05-30 19:30:00.000,,,,not published
+2025-05-30,mercury,lynx,ION,2025-05-30 22:00:00.000,,,,not published
+2025-05-30,storm,dream,ION,2025-05-30 22:00:00.000,,,,not published
+2025-05-30,aces,sparks,ION,2025-05-30 22:00:00.000,,,,not published
+2025-06-03,fever,mystics,NBA TV,2025-06-03 19:00:00.000,,,,not published
+2025-06-03,storm,wings,ESPN,2025-06-03 21:30:00.000,,,,not published
+2025-06-06,sun,dream,ION,2025-06-06 19:30:00.000,,,,not published
+2025-06-06,wings,sparks,ION,2025-06-06 21:30:00.000,,,,not published
+2025-06-07,valkyries,aces,ABC,2025-06-07 15:00:00.000,,,,not published
+2025-06-07,sky,fever,CBS,2025-06-07 20:00:00.000,1920000,panel,https://www.sportsmediawatch.com/2025/06/fever-sky-ratings-cbs-top-ten-audience-despite-clark-absence/,rounded
+2025-06-10,liberty,sky,ESPN,2025-06-10 20:00:00.000,,,,not published
+2025-06-11,aces,sparks,CBSSN,2025-06-11 22:00:00.000,,,,not published
+2025-06-13,dream,sky,ION,2025-06-13 19:30:00.000,,,,not published
+2025-06-13,aces,wings,ION,2025-06-13 22:00:00.000,,,,not published
+2025-06-14,lynx,sparks,CBS,2025-06-14 13:00:00.000,,,,not published
+2025-06-14,fever,liberty,ABC,2025-06-14 15:00:00.000,2200000,panel,https://frontofficesports.com/caitlin-clark-effect-back-in-full-as-fever-liberty-draws-2-2-million-viewers/,rounded
+2025-06-15,sun,sky,CBS,2025-06-15 12:00:00.000,,,,not published
+2025-06-15,mystics,dream,CBSSN,2025-06-15 14:00:00.000,,,,not published
+2025-06-17,fever,sun,NBA TV,2025-06-17 19:00:00.000,,,,not published
+2025-06-17,sparks,storm,NBA TV,2025-06-17 22:00:00.000,,,,not published
+2025-06-20,sun,wings,ION,2025-06-20 19:30:00.000,,,,not published
+2025-06-20,dream,mystics,ION,2025-06-20 19:30:00.000,,,,not published
+2025-06-20,aces,storm,ION,2025-06-20 22:00:00.000,,,,not published
+2025-06-21,sky,mercury,ABC,2025-06-21 13:00:00.000,,,,not published
+2025-06-21,lynx,sparks,NBA TV,2025-06-21 20:00:00.000,,,,not published
+2025-06-22,aces,fever,ESPN,2025-06-22 15:00:00.000,1700000,panel,https://frontofficesports.com/fever-vs-aces-draws-5th-largest-tv-audience-of-2025-wnba-season/,rounded
+2025-06-24,sky,sparks,NBA TV,2025-06-24 20:00:00.000,,,,not published
+2025-06-24,storm,fever,NBA TV,2025-06-24 22:00:00.000,,,,not published
+2025-06-25,aces,sun,NBA TV,2025-06-25 22:00:00.000,,,,not published
+2025-06-27,wings,fever,ION,2025-06-27 19:30:00.000,1140000,panel,https://frontofficesports.com/wnba-hits-fourth-highest-abc-viewership-with-clark-bueckers-duel/,rounded; regional window
+2025-06-27,dream,lynx,ION,2025-06-27 19:30:00.000,,,,not published
+2025-06-27,mercury,liberty,ION,2025-06-27 22:00:00.000,,,,not published
+2025-06-27,storm,sun,ION,2025-06-27 22:00:00.000,,,,not published
+2025-06-27,valkyries,sky,ION,2025-06-27 22:00:00.000,,,,not published
+2025-06-29,sparks,sky,ESPN,2025-06-29 16:00:00.000,,,,not published
+2025-06-29,mercury,aces,NBA TV,2025-06-29 18:00:00.000,,,,not published
 2025-07-05,fever,sparks,NBA TV,2025-07-05 19:00:00.000,,,,
 2025-07-06,liberty,storm,CBS,2025-07-06 13:00:00.000,,,,
 2025-07-08,liberty,aces,ESPN,2025-07-08 20:00:00.000,,,,

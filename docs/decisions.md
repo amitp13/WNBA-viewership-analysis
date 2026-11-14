@@ -84,6 +84,7 @@ These rules decide what goes into seeds/telecasts.csv. Each row is one national 
 6. **No published number.** The game stays. viewers, measurement and source_url are blank, notes = "not published". This keeps coverage measurable ("X of Y national games had a published audience").
 7. **Regional windows.** When ION airs different games in different markets in the same slot, the source gives one number for the whole window. If one game aired in nearly all markets (others only in their home markets), that game gets the window number with notes = "regional window"; the home-market games stay "not published". If no game was national, all games in the window stay "not published". Never split a window total.
 8. **CBS Sports Network.** CBSSN was not Nielsen-rated in 2024, so its games have no published audience ([Awful Announcing](https://awfulannouncing.com/ratings/cbs-ion-nba-tv-wnba-viewership-records.html)). 2025 to be confirmed in 4.6.
+9. **Fourth source tier (2025 only).** If none of the first three sources has a game's number, a national sports or media outlet may be used when it quotes the network's own figure and names the network as the source (for example "per Scripps Sports PR"). One link per row as usual; notes = "<network> PR via <outlet>". Added Nov 14, 2026 because Sports Media Watch moved most 2025 game numbers to a tracker page with no per-game links.
 
 ## National game list (Nov 11, 2026)
 
