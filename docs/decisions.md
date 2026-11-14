@@ -83,15 +83,15 @@ These rules decide what goes into seeds/telecasts.csv. Each row is one national 
 5. **Sources, in order.** The network's own press room (ESPN Press Room for ABC, ESPN and ESPN2), then Sports Media Watch, then Front Office Sports. One link per row, to the article that gives that game's number.
 6. **No published number.** The game stays. viewers, measurement and source_url are blank, notes = "not published". This keeps coverage measurable ("X of Y national games had a published audience").
 7. **Regional windows.** When ION airs different games in different markets in the same slot, the source gives one number for the whole window. If one game aired in nearly all markets (others only in their home markets), that game gets the window number with notes = "regional window"; the home-market games stay "not published". If no game was national, all games in the window stay "not published". Never split a window total.
-8. **CBS Sports Network.** CBSSN was not Nielsen-rated in 2024, so its games have no published audience ([Awful Announcing](https://awfulannouncing.com/ratings/cbs-ion-nba-tv-wnba-viewership-records.html)). 2025 to be confirmed in 4.6.
+8. **CBS Sports Network.** CBSSN was not Nielsen-rated in 2024, so its games have no published audience ([Awful Announcing](https://awfulannouncing.com/ratings/cbs-ion-nba-tv-wnba-viewership-records.html)). 2025: no published numbers found either (0 of 18 games across both seasons).
 9. **Fourth source tier (2025 only).** If none of the first three sources has a game's number, a national sports or media outlet may be used when it quotes the network's own figure and names the network as the source (for example "per Scripps Sports PR"). One link per row as usual; notes = "<network> PR via <outlet>". Added Nov 14, 2026 because Sports Media Watch moved most 2025 game numbers to a tracker page with no per-game links.
-10. **Looser sources (2025 only, added Nov 14, 2026).** Where no source under rules 3 and 9 has a game's number, a figure from a reporter, a network analyst, an unattributed ratings roundup, or an outlet that gives no source may be used. The notes column must say exactly where it came from (for example "NY Post reporter via Awful Announcing"). Vague figures ("nearly", "just shy of") are still left blank. These rows can be filtered out to check the results hold without them.
+10. **Looser sources (2025 only, added Nov 14, 2026).** Where no source under rules 5 and 9 has a game's number, a figure from a reporter, a network analyst, an unattributed ratings roundup, or an outlet that gives no source may be used. The notes column must say exactly where it came from (for example "NY Post reporter via Awful Announcing"). Vague figures ("nearly", "just shy of") are still left blank. These rows can be filtered out to check the results hold without them.
 
 ## National game list (Nov 11, 2026)
 
 **Network names kept (7):** ABC, CBS, CBSSN (CBS Sports Network), ESPN, ESPN2, ION, NBA TV. Filtered on BROADCAST_NAME, not BROADCAST_MARKET, because "national" also includes streaming.
 
-**Dropped:** WNBA League Pass, Prime Video and ESPN3 (streaming); MNMT, WWOR-TV and KFAA-TV (local channels). Each game has exactly one broadcast name, so a national game listed under a local or streaming name would be missed; rechecked in step 4.9.
+**Dropped:** WNBA League Pass, Prime Video and ESPN3 (streaming); MNMT, WWOR-TV and KFAA-TV (local channels). Each game has exactly one broadcast name, so a national game listed under a local or streaming name would be missed; step 4.9 found and added two (2024 NBA TV).
 
 **Result:** 305 national TV games. 2024: 147. 2025: 158.
 
@@ -103,7 +103,7 @@ These rules decide what goes into seeds/telecasts.csv. Each row is one national 
 | ESPN | 27 | 27 |
 | ESPN2 | 7 | 6 |
 | ION | 43 | 50 |
-| NBA TV | 36 | 39 |
+| NBA TV | 38 | 39 |
 
 **Checked against ESPN's published 2025 counts:** 25 regular season games on ABC, ESPN and ESPN2, 12 of them on ABC, and 24 postseason games ([ESPN Press Room](https://espnpressroom.com/press-release/espn-networks-deliver-most-watched-wnba-regular-season-ever/), [ESPN Press Room](https://espnpressroom.com/press-release/espns-monumental-wnba-season-sets-new-viewership-records/)). All three match. The 2025 Finals networks match game by game ([Front Office Sports](https://frontofficesports.com/?p=205896)).
 
@@ -176,6 +176,10 @@ Source: FiveThirtyEight, "How Our WNBA Predictions Work" ([archived copy](https:
 **Limitations.** Fever fans skew the fan vote (Boston is a superstar in both seasons). Fan voting closes in late June, so early-season games feed into it. Thomas and Sabally changed teams for 2025, so each player's team comes from that season's box scores.
 
 **Model: int_star_availability (Nov 13).** One row per star per team game, including the Cup final and playoffs. Regular season games played match published counts for 5 star-seasons (tests/assert_star_games_match_published.sql, sources in the file).
+
+## NFL overlap rule (Nov 14, 2026)
+
+**NFL overlap rule (Nov 14).** A WNBA broadcast overlaps the NFL when the windows touch. NFL window: kickoff to kickoff + 3h15m ([SI](https://www.si.com/nfl/how-long-is-the-super-bowl-on-average-running-the-numbers), about 3h12m; [The Ringer](https://www.theringer.com/nfl/2024/9/5/24236291/nfl-2024-season-broadcast-windows-expansion-philadelphia-eagles-green-bay-packers-brazil), 3h15m). WNBA window: tip-off to tip-off + 2h ([MasterClass](https://www.masterclass.com/articles/how-long-are-basketball-games), 2 to 2.5h). Columns: has_nfl_overlap, nfl_games_overlapping. Robustness: WNBA window 2.5h.
 
 ## Open items
 
