@@ -1,61 +1,61 @@
 game_date,home_team,away_team,network,start_time_et,viewers,measurement,source_url,notes
-2024-05-14,sun,fever,ESPN2,2024-05-14 19:30:00.000,,,,
-2024-05-14,aces,mercury,ESPN2,2024-05-14 22:00:00.000,,,,
-2024-05-17,sun,mystics,ION,2024-05-17 19:30:00.000,,,,
-2024-05-17,lynx,storm,ION,2024-05-17 21:30:00.000,,,,
-2024-05-18,liberty,fever,ABC,2024-05-18 13:00:00.000,,,,
-2024-05-18,aces,sparks,ABC,2024-05-18 15:00:00.000,,,,
-2024-05-18,wings,sky,NBA TV,2024-05-18 20:00:00.000,,,,
-2024-05-18,mercury,dream,NBA TV,2024-05-18 22:00:00.000,,,,
-2024-05-20,fever,sun,ESPN,2024-05-20 19:00:00.000,,,,
-2024-05-24,sparks,fever,ION,2024-05-24 22:00:00.000,,,,
-2024-05-25,lynx,liberty,CBS,2024-05-25 13:00:00.000,,,,
-2024-05-25,sky,sun,CBSSN,2024-05-25 20:00:00.000,,,,
-2024-05-25,aces,fever,NBA TV,2024-05-25 21:00:00.000,,,,
-2024-05-28,sun,mercury,CBSSN,2024-05-28 19:00:00.000,,,,
-2024-05-28,fever,sparks,NBA TV,2024-05-28 19:00:00.000,,,,
-2024-05-29,liberty,mercury,CBSSN,2024-05-29 19:00:00.000,,,,
-2024-05-29,lynx,aces,NBA TV,2024-05-29 20:00:00.000,,,,
-2024-05-31,dream,aces,ION,2024-05-31 19:30:00.000,,,,
-2024-05-31,sun,wings,ION,2024-05-31 19:30:00.000,,,,
-2024-05-31,liberty,mystics,ION,2024-05-31 19:30:00.000,,,,
-2024-05-31,lynx,mercury,ION,2024-05-31 21:30:00.000,,,,
-2024-06-01,fever,sky,ESPN,2024-06-01 12:00:00.000,,,,
-2024-06-02,liberty,fever,NBA TV,2024-06-02 19:00:00.000,,,,
-2024-06-02,lynx,wings,CBSSN,2024-06-02 19:00:00.000,,,,
-2024-06-04,sky,liberty,NBA TV,2024-06-04 20:00:00.000,,,,
-2024-06-04,storm,mercury,CBSSN,2024-06-04 22:00:00.000,,,,
-2024-06-05,wings,aces,NBA TV,2024-06-05 20:00:00.000,,,,
-2024-06-07,mystics,fever,ION,2024-06-07 19:30:00.000,,,,
-2024-06-07,aces,storm,ION,2024-06-07 22:00:00.000,,,,
-2024-06-07,sparks,wings,ION,2024-06-07 22:00:00.000,,,,
-2024-06-07,mercury,lynx,ION,2024-06-07 22:00:00.000,,,,
-2024-06-08,sun,liberty,ABC,2024-06-08 13:00:00.000,,,,
-2024-06-08,sky,dream,NBA TV,2024-06-08 17:00:00.000,,,,
-2024-06-10,sun,fever,NBA TV,2024-06-10 19:00:00.000,,,,
-2024-06-11,aces,lynx,NBA TV,2024-06-11 22:00:00.000,,,,
-2024-06-13,wings,storm,ESPN,2024-06-13 19:00:00.000,,,,
-2024-06-14,lynx,sparks,ION,2024-06-14 19:30:00.000,,,,
-2024-06-14,mystics,sky,ION,2024-06-14 19:30:00.000,,,,
-2024-06-15,wings,sun,CBS,2024-06-15 13:00:00.000,,,,
-2024-06-15,aces,liberty,ABC,2024-06-15 15:00:00.000,,,,
-2024-06-16,fever,sky,CBS,2024-06-16 12:00:00.000,,,,
-2024-06-16,mercury,storm,ABC,2024-06-16 15:00:00.000,,,,
-2024-06-18,sun,sparks,NBA TV,2024-06-18 19:00:00.000,,,,
-2024-06-18,mercury,liberty,CBSSN,2024-06-18 22:00:00.000,,,,
-2024-06-19,fever,mystics,NBA TV,2024-06-19 19:00:00.000,,,,
-2024-06-19,aces,storm,NBA TV,2024-06-19 22:00:00.000,,,,
-2024-06-21,dream,fever,ION,2024-06-21 19:30:00.000,,,,
-2024-06-21,aces,sun,ION,2024-06-21 22:00:00.000,,,,
-2024-06-22,liberty,sparks,ESPN,2024-06-22 15:00:00.000,,,,
-2024-06-22,lynx,mercury,NBA TV,2024-06-22 20:00:00.000,,,,
-2024-06-23,sky,fever,ESPN,2024-06-23 16:00:00.000,,,,
-2024-06-27,mystics,sun,NBA TV,2024-06-27 19:00:00.000,,,,
-2024-06-28,sun,dream,ION,2024-06-28 19:30:00.000,,,,
-2024-06-28,mercury,sparks,ION,2024-06-28 22:00:00.000,,,,
-2024-06-29,storm,wings,NBA TV,2024-06-29 21:00:00.000,,,,
-2024-06-30,liberty,dream,ESPN,2024-06-30 13:00:00.000,,,,
-2024-06-30,mercury,fever,ESPN,2024-06-30 15:00:00.000,,,,
+2024-05-14,sun,fever,ESPN2,2024-05-14 19:30:00.000,2100000,panel,https://espnpressroom.com/press-release/the-2024-wnba-season-delivers-record-viewership-across-espn-platforms/,rounded
+2024-05-14,aces,mercury,ESPN2,2024-05-14 22:00:00.000,464000,panel,https://www.sportsmediawatch.com/2024/05/caitlin-clark-debut-ratings-largest-wnba-audience-23-years/,
+2024-05-17,sun,mystics,ION,2024-05-17 19:30:00.000,290000,panel,https://www.sportsmediawatch.com/2024/05/caitlin-clark-wnba-ratings-indiana-fever-liberty-abc-viewership-aces-sparks/,
+2024-05-17,lynx,storm,ION,2024-05-17 21:30:00.000,266000,panel,https://www.sportsmediawatch.com/2024/05/caitlin-clark-wnba-ratings-indiana-fever-liberty-abc-viewership-aces-sparks/,
+2024-05-18,liberty,fever,ABC,2024-05-18 13:00:00.000,1700000,panel,https://espnpressroom.com/press-release/the-2024-wnba-season-delivers-record-viewership-across-espn-platforms/,rounded
+2024-05-18,aces,sparks,ABC,2024-05-18 15:00:00.000,1340000,panel,https://www.sportsmediawatch.com/2024/05/caitlin-clark-wnba-ratings-indiana-fever-liberty-abc-viewership-aces-sparks/,rounded
+2024-05-18,wings,sky,NBA TV,2024-05-18 20:00:00.000,101000,panel,https://www.sportsmediawatch.com/2024/05/caitlin-clark-wnba-ratings-indiana-fever-liberty-abc-viewership-aces-sparks/,
+2024-05-18,mercury,dream,NBA TV,2024-05-18 22:00:00.000,108000,panel,https://www.sportsmediawatch.com/2024/05/caitlin-clark-wnba-ratings-indiana-fever-liberty-abc-viewership-aces-sparks/,
+2024-05-20,fever,sun,ESPN,2024-05-20 19:00:00.000,1560000,panel,https://www.sportsmediawatch.com/2024/05/caitlin-clark-wnba-ratings-indiana-fever-liberty-abc-viewership-aces-sparks/,rounded
+2024-05-24,sparks,fever,ION,2024-05-24 22:00:00.000,724000,panel,https://www.sportsmediawatch.com/2024/05/caitlin-clark-ratings-ion-nba-tv-record-viewership-wnba-cbs-lynx-liberty/,
+2024-05-25,lynx,liberty,CBS,2024-05-25 13:00:00.000,704000,panel,https://www.sportsmediawatch.com/2024/05/caitlin-clark-ratings-ion-nba-tv-record-viewership-wnba-cbs-lynx-liberty/,
+2024-05-25,sky,sun,CBSSN,2024-05-25 20:00:00.000,,,,not published
+2024-05-25,aces,fever,NBA TV,2024-05-25 21:00:00.000,333000,panel,https://www.sportsmediawatch.com/2024/05/caitlin-clark-ratings-ion-nba-tv-record-viewership-wnba-cbs-lynx-liberty/,
+2024-05-28,sun,mercury,CBSSN,2024-05-28 19:00:00.000,,,,not published
+2024-05-28,fever,sparks,NBA TV,2024-05-28 19:00:00.000,356000,panel,https://www.sportsmediawatch.com/2024/05/tuesday-5-28-sports-viewership-nba-wolves-mavs-nhl-rangers-panthers-caitlin-clark/,
+2024-05-29,liberty,mercury,CBSSN,2024-05-29 19:00:00.000,,,,not published
+2024-05-29,lynx,aces,NBA TV,2024-05-29 20:00:00.000,,,,not published
+2024-05-31,dream,aces,ION,2024-05-31 19:30:00.000,,,,not published
+2024-05-31,sun,wings,ION,2024-05-31 19:30:00.000,,,,not published
+2024-05-31,liberty,mystics,ION,2024-05-31 19:30:00.000,,,,not published
+2024-05-31,lynx,mercury,ION,2024-05-31 21:30:00.000,368000,panel,https://www.sportsmediawatch.com/2024/06/caitlin-clark-angel-reese-ratings-fever-sky-viewership-espn/,
+2024-06-01,fever,sky,ESPN,2024-06-01 12:00:00.000,1530000,panel,https://www.sportsmediawatch.com/2024/06/caitlin-clark-angel-reese-ratings-fever-sky-viewership-espn/,rounded
+2024-06-02,liberty,fever,NBA TV,2024-06-02 19:00:00.000,430000,panel,https://www.sportsmediawatch.com/2024/06/caitlin-clark-angel-reese-ratings-fever-sky-viewership-espn/,
+2024-06-02,lynx,wings,CBSSN,2024-06-02 19:00:00.000,,,,not published
+2024-06-04,sky,liberty,NBA TV,2024-06-04 20:00:00.000,,,,not published
+2024-06-04,storm,mercury,CBSSN,2024-06-04 22:00:00.000,,,,not published
+2024-06-05,wings,aces,NBA TV,2024-06-05 20:00:00.000,,,,not published
+2024-06-07,mystics,fever,ION,2024-06-07 19:30:00.000,1020000,panel,https://www.sportsmediawatch.com/2024/06/caitlin-clark-effect-ratings-wnba-setting-records-lifting-rest-league/,rounded
+2024-06-07,aces,storm,ION,2024-06-07 22:00:00.000,,,,not published
+2024-06-07,sparks,wings,ION,2024-06-07 22:00:00.000,,,,not published
+2024-06-07,mercury,lynx,ION,2024-06-07 22:00:00.000,,,,not published
+2024-06-08,sun,liberty,ABC,2024-06-08 13:00:00.000,962000,panel,https://www.sportsmediawatch.com/2024/06/caitlin-clark-effect-ratings-wnba-setting-records-lifting-rest-league/,
+2024-06-08,sky,dream,NBA TV,2024-06-08 17:00:00.000,175000,panel,https://www.sportsmediawatch.com/2024/06/caitlin-clark-effect-ratings-wnba-setting-records-lifting-rest-league/,
+2024-06-10,sun,fever,NBA TV,2024-06-10 19:00:00.000,424000,panel,https://www.sportsmediawatch.com/2024/06/monday-6-10-sports-viewership-stanley-cup-college-baseball-caitlin-clark-fever/,
+2024-06-11,aces,lynx,NBA TV,2024-06-11 22:00:00.000,156000,panel,https://www.sportsmediawatch.com/2024/06/tuesday-6-11-sports-viewership-mlb-tbs-wnba-espn-documentary-false-positive/,
+2024-06-13,wings,storm,ESPN,2024-06-13 19:00:00.000,,,,not published
+2024-06-14,lynx,sparks,ION,2024-06-14 19:30:00.000,,,,not published
+2024-06-14,mystics,sky,ION,2024-06-14 19:30:00.000,,,,not published
+2024-06-15,wings,sun,CBS,2024-06-15 13:00:00.000,,,,not published
+2024-06-15,aces,liberty,ABC,2024-06-15 15:00:00.000,996000,panel,https://www.sportsmediawatch.com/2024/06/caitlin-clark-angel-reese-ratings-most-watched-wnba-game-23-years/,
+2024-06-16,fever,sky,CBS,2024-06-16 12:00:00.000,2250000,panel,https://www.sportsmediawatch.com/2024/06/caitlin-clark-angel-reese-ratings-most-watched-wnba-game-23-years/,rounded
+2024-06-16,mercury,storm,ABC,2024-06-16 15:00:00.000,757000,panel,https://www.sportsmediawatch.com/2024/06/caitlin-clark-angel-reese-ratings-most-watched-wnba-game-23-years/,
+2024-06-18,sun,sparks,NBA TV,2024-06-18 19:00:00.000,,,,not published
+2024-06-18,mercury,liberty,CBSSN,2024-06-18 22:00:00.000,,,,not published
+2024-06-19,fever,mystics,NBA TV,2024-06-19 19:00:00.000,460000,panel,https://www.sportsmediawatch.com/2024/06/caitlin-clark-viewership-records-indiana-fever-nba-tv-espn-cbs-abc-ion/,
+2024-06-19,aces,storm,NBA TV,2024-06-19 22:00:00.000,179000,panel,https://www.sportsmediawatch.com/2024/06/caitlin-clark-viewership-records-indiana-fever-nba-tv-espn-cbs-abc-ion/,
+2024-06-21,dream,fever,ION,2024-06-21 19:30:00.000,1180000,panel,https://www.sportsmediawatch.com/2024/06/caitlin-clark-angel-reese-ratings-most-watched-23-years-espn-record-ion-viewership/,rounded
+2024-06-21,aces,sun,ION,2024-06-21 22:00:00.000,691000,panel,https://www.sportsmediawatch.com/2024/06/caitlin-clark-angel-reese-ratings-most-watched-23-years-espn-record-ion-viewership/,
+2024-06-22,liberty,sparks,ESPN,2024-06-22 15:00:00.000,,,,not published
+2024-06-22,lynx,mercury,NBA TV,2024-06-22 20:00:00.000,,,,not published
+2024-06-23,sky,fever,ESPN,2024-06-23 16:00:00.000,2300000,panel,https://espnpressroom.com/press-release/the-2024-wnba-season-delivers-record-viewership-across-espn-platforms/,rounded
+2024-06-27,mystics,sun,NBA TV,2024-06-27 19:00:00.000,,,,not published
+2024-06-28,sun,dream,ION,2024-06-28 19:30:00.000,,,,not published
+2024-06-28,mercury,sparks,ION,2024-06-28 22:00:00.000,,,,not published
+2024-06-29,storm,wings,NBA TV,2024-06-29 21:00:00.000,,,,not published
+2024-06-30,liberty,dream,ESPN,2024-06-30 13:00:00.000,586000,panel,https://www.sportsmediawatch.com/2024/07/wnba-ratings-caitlin-clark-diana-taurasi-fever-mercury-viewership-espn/,
+2024-06-30,mercury,fever,ESPN,2024-06-30 15:00:00.000,1930000,panel,https://www.sportsmediawatch.com/2024/07/wnba-ratings-caitlin-clark-diana-taurasi-fever-mercury-viewership-espn/,rounded
 2024-07-01,storm,wings,NBA TV,2024-07-01 22:00:00.000,,,,
 2024-07-02,dream,sky,CBSSN,2024-07-02 19:00:00.000,,,,
 2024-07-02,aces,fever,ESPN,2024-07-02 21:30:00.000,,,,

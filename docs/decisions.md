@@ -82,6 +82,8 @@ These rules decide what goes into seeds/telecasts.csv. Each row is one national 
 4. **Measurement.** Column measurement = panel or big_data_panel. Record the number exactly as the source reports it, never adjusted. Nielsen made Big Data + Panel the official number on Sept 1, 2025 ([Nielsen](https://www.nielsen.com/news-center/2025/nielsen-begins-updated-era-of-tv-ratings-with-big-data-panel-for-this-falls-tv-season)), and most 2025 regular season figures are panel only ([Sports Media Watch](https://www.sportsmediawatch.com/2025/10/wnba-playoff-ratings-aces-fever-game-five-viewership/)). The switch happened partway through 2025, not between seasons, so the regression needs a measurement flag on top of the season fixed effect. If a source gives both numbers, use big_data_panel and put the panel number in notes.
 5. **Sources, in order.** The network's own press room (ESPN Press Room for ABC, ESPN and ESPN2), then Sports Media Watch, then Front Office Sports. One link per row, to the article that gives that game's number.
 6. **No published number.** The game stays. viewers, measurement and source_url are blank, notes = "not published". This keeps coverage measurable ("X of Y national games had a published audience").
+7. **Regional windows.** When ION airs different games in different markets in the same slot, the source gives one number for the whole window, not per game. Those games stay "not published". Splitting the window total would be an estimate.
+8. **CBS Sports Network.** CBSSN was not Nielsen-rated in 2024, so its games have no published audience ([Awful Announcing](https://awfulannouncing.com/ratings/cbs-ion-nba-tv-wnba-viewership-records.html)). 2025 to be confirmed in 4.6.
 
 ## National game list (Nov 11, 2026)
 
