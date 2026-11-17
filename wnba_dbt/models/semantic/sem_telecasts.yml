@@ -1,0 +1,110 @@
+version: 2
+
+semantic_models:
+  - name: telecasts
+    description: "One row per national TV broadcast, from fct_telecasts."
+    model: ref('fct_telecasts')
+    defaults:
+      agg_time_dimension: game_date
+    entities:
+      - name: telecast
+        type: primary
+        expr: game_id
+    dimensions:
+      - name: game_date
+        type: time
+        type_params:
+          time_granularity: day
+      - name: season
+        type: categorical
+      - name: network
+        type: categorical
+      - name: game_type
+        type: categorical
+      - name: is_playoff
+        type: categorical
+      - name: day_of_week
+        type: categorical
+      - name: has_nfl_overlap
+        type: categorical
+      - name: measurement
+        type: categorical
+      - name: superstars_available
+        type: categorical
+    measures:
+      - name: viewers_avg
+        description: "Average viewers across broadcasts with a published number."
+        agg: average
+        expr: viewers
+      - name: broadcasts_with_viewers
+        agg: count
+        expr: viewers
+      - name: broadcasts
+        agg: count
+        expr: game_id
+
+metrics:
+  - name: average_viewers
+    label: "Average viewers"
+    description: "Average viewers per broadcast, among broadcasts with a published number."
+    type: simple
+    type_params:
+      measure: viewers_avg
+
+  - name: broadcasts_with_viewers
+    label: "Broadcasts with a published number"
+    type: simple
+    type_params:
+      measure: broadcasts_with_viewers
+
+  - name: broadcasts
+    label: "Broadcasts"
+    type: simple
+    type_params:
+      measure: broadcasts
+
+  - name: coverage
+    label: "Share of broadcasts with a published number"
+    type: ratio
+    type_params:
+      numerator: broadcasts_with_viewers
+      denominator: broadcasts
+
+  - name: avg_viewers_superstar_playing
+    label: "Average viewers, at least one superstar playing"
+    type: simple
+    type_params:
+      measure: viewers_avg
+    filter: "{{ Dimension('telecast__superstars_available') }} > 0"
+
+  - name: avg_viewers_no_superstar
+    label: "Average viewers, no superstar playing"
+    type: simple
+    type_params:
+      measure: viewers_avg
+    filter: "{{ Dimension('telecast__superstars_available') }} = 0"
+
+  - name: star_lift
+    label: "Star lift"
+    description: "How much higher average viewers are with a superstar playing. 0.5 = 50% higher. Raw comparison, no controls; the regression adds them."
+    type: derived
+    type_params:
+      expr: with_star / without_star - 1
+      metrics:
+        - name: avg_viewers_superstar_playing
+          alias: with_star
+        - name: avg_viewers_no_superstar
+          alias: without_star
+
+  - name: season_growth
+    label: "Season growth in average viewers"
+    description: "Change in average viewers vs the year before. Query by year. Raw comparison, no controls."
+    type: derived
+    type_params:
+      expr: this_year / last_year - 1
+      metrics:
+        - name: average_viewers
+          alias: this_year
+        - name: average_viewers
+          alias: last_year
+          offset_window: 1 year
