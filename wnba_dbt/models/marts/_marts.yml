@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: fct_telecasts
+    description: "One row per national TV broadcast, 2024 and 2025. Viewers plus everything that might explain them: stars, Elo, network, time slot, NFL overlap. The table the regression uses."
+    columns:
+      - name: game_id
+        description: "ESPN game ID. One row per broadcast."
+        data_tests:
+          - unique
+          - not_null
+      - name: season
+        description: "Filled only if the broadcast found its game in the schedule."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [2024, 2025]
+      - name: home_elo_pre
+        data_tests:
+          - not_null
+      - name: away_elo_pre
+        data_tests:
+          - not_null
+      - name: nfl_games_overlapping
+        data_tests:
+          - not_null
+      - name: superstars_available
+        data_tests:
+          - not_null
+      - name: viewers
+        data_tests:
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 1
