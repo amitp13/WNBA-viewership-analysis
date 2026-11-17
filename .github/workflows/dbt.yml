@@ -55,3 +55,62 @@ jobs:
 
       - name: Check the metrics
         run: mf validate-configs --skip-dw
+
+  build:
+    name: Build and test on Snowflake
+    needs: checks
+    runs-on: ubuntu-latest
+    concurrency: snowflake-ci
+    env:
+      DBT_PROFILES_DIR: /home/runner/.dbt
+      SNOWFLAKE_KEY_PASSPHRASE: ${{ secrets.SNOWFLAKE_KEY_PASSPHRASE }}
+    defaults:
+      run:
+        working-directory: wnba_dbt
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dbt and MetricFlow
+        run: pip install -r ../requirements.txt
+
+      - name: Write the private key from the GitHub secret
+        env:
+          SNOWFLAKE_PRIVATE_KEY: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
+        run: |
+          mkdir -p /home/runner/.snowflake
+          echo "$SNOWFLAKE_PRIVATE_KEY" > /home/runner/.snowflake/rsa_key.p8
+          chmod 600 /home/runner/.snowflake/rsa_key.p8
+
+      - name: Write the Snowflake login (CI schema, never touches DEV)
+        run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml <<'EOF'
+          wnba_dbt:
+            target: ci
+            outputs:
+              ci:
+                type: snowflake
+                account: MTKQGDT-RE05913
+                user: DBT_USER
+                role: TRANSFORMER
+                warehouse: WNBA_WH
+                database: WNBA
+                schema: CI
+                threads: 4
+                private_key_path: /home/runner/.snowflake/rsa_key.p8
+                private_key_passphrase: "{{ env_var('SNOWFLAKE_KEY_PASSPHRASE') }}"
+          EOF
+
+      - name: Install dbt packages
+        run: dbt deps
+
+      - name: Build every model and run every test
+        run: dbt build
