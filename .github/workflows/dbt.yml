@@ -1,0 +1,55 @@
+name: dbt CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  checks:
+    name: Parse and validate (no warehouse needed)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: wnba_dbt
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dbt and MetricFlow
+        run: pip install -r ../requirements.txt
+
+      - name: Write a placeholder login (parse never connects to Snowflake)
+        run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml <<'EOF'
+          wnba_dbt:
+            target: ci
+            outputs:
+              ci:
+                type: snowflake
+                account: placeholder
+                user: placeholder
+                password: placeholder
+                role: placeholder
+                database: WNBA
+                warehouse: placeholder
+                schema: CI
+                threads: 1
+          EOF
+
+      - name: Install dbt packages
+        run: dbt deps
+
+      - name: Check every file parses
+        run: dbt parse
+
+      - name: Check the metrics
+        run: mf validate-configs --skip-dw
