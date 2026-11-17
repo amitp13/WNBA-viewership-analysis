@@ -9,6 +9,8 @@ jobs:
   checks:
     name: Parse and validate (no warehouse needed)
     runs-on: ubuntu-latest
+    env:
+      DBT_PROFILES_DIR: /home/runner/.dbt
     defaults:
       run:
         working-directory: wnba_dbt
