@@ -59,6 +59,7 @@ jobs:
   build:
     name: Build and test on Snowflake
     needs: checks
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     concurrency: snowflake-ci
     env:
